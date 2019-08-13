@@ -1,19 +1,11 @@
 function fetchGoogleInformation(event) {
     
-    var place =$("beach-input").val();
+    var place =$("address").val();
     if (!place) {
         $("#gm-user-data").html(`<h2>Please enter location</h2>`);
     return;
 }
 
-$.when(
-    $.getJSON(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?&key=AIzaSyBf7HMHGCXUjaGwoKuPbWfTlez8wLJBwVs/${place}`)
-    ).then(
-        function(response) {
-            
-        })
-
-}
 
 /*
 Open UV Javascript request
@@ -43,9 +35,3 @@ function getUVIndex() {
 */
 
 
-/*
-
- <input id="address"type="text box" placeholder="       Where are you?" oninput="fetchGoogleInformation()">
-            <div class="input-group-append">
-                <button class="btn btn-success btn-lg btn-block btn-huge" type="button">CHECK NOW</button>
-                */
